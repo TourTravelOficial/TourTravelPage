@@ -315,6 +315,13 @@ footer .box{
     align-items: center;
 }
 
+footer .box .Contact,
+footer .box .mail,
+footer .box .socialmediaf,
+footer .box .copyright{
+    font-size: 0.78rem;
+}
+
 footer .box img{
     width: 160px;
     height: 120px;
