@@ -1,0 +1,248 @@
+/* ======================== Base ======================== */
+:root{
+  --color1: #17252A;
+  --coloralternativ1: #0F0F0F;
+  --color2: #2B7A78;
+  --color3: #3AAFA9;
+  --coloralternative3: #49D3CE;
+  --color4: #DEF2F1;
+  --color5: #FEFFFF;
+
+  --menu-titulos: 1.4rem;
+}
+/* ======================== Base ======================== */
+
+/* --- Base Head --- */
+.head {
+  padding: 20px;
+  background: var(--color1);
+  position: relative;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 80%;
+}
+
+/* --- Menú normal en escritorio --- */
+nav {
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--color3);
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: var(--coloralternative3);
+}
+
+/* --- Hamburguesa Oculta en escritorio --- */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle .bar {
+  height: 3px;
+  width: 100%;
+  background-color: var(--color4);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+/* --- Overlay --- */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+  z-index: 900;
+}
+
+/* Cuando activo */
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+
+/* --- Responsive para móviles/tablets --- */
+@media (max-width: 1050px) {
+  /* Ocultamos el menú normal */
+
+  .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -800px;
+    height: 100%;
+    width: 250px;
+    background: var(--color3);
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: right 0.4s ease;
+    z-index: 1000;
+  }
+
+  nav ul li a{
+    color: var(--color1);
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* Mostramos la hamburguesa */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Cuando está abierto */
+  nav.active {
+    right: 0;
+  }
+
+}
+
+@media (max-width: 750px){
+  .about .texto{
+    text-align: center;
+    font-size: 1rem;
+    padding: 6px;
+  }
+
+  .destinos .tarjetas .tarjeta .texto{
+    font-size: 0.9rem;
+    padding-left: 2px;
+  }
+}
+
+@media (max-width: 580px){
+
+  .destinos .ajuste .texto span{
+    font-size: 0.9rem;
+  }
+
+  .bg .ajuste .eslogan h1{
+    font-size: 1rem;
+  }
+
+  .bg .ajuste .description p{
+    font-size: 0.8rem;
+  }
+
+  footer .box-fix{
+    width: 52%;
+  }
+
+  footer .box-fix2{
+    width: 1%;
+  }
+
+  footer .box img{
+    width: 100px;
+    height: 80px;
+  }
+
+  footer .box .ajuste .copyright{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 380px){
+
+  footer .box{
+    width: 29%;
+    padding: 5px;
+    font-size: 0.6rem;
+  }
+
+  footer .box-fix{
+    width: 70%;
+  }
+
+  footer .box .ajuste .ajustet,
+  footer .box .ajuste .ajusteb{
+    height: 10%;
+  }
+
+  footer .box .ajuste .Contact,
+  footer .box .ajuste .mail,
+  footer .box .ajuste .socialmediaf,
+  footer .box .ajuste .copyright{
+    height: 20%;
+  }
+
+  footer .box-fix2{
+    width: 1%;
+  }
+
+  footer .box img{
+    width: 100px;
+    height: 80px;
+  }
+
+  footer .ajuste h3{
+    font-size: 0.9rem;
+  }
+
+  footer .ajuste .mail{
+    font-size: 0.6rem;
+  }
+
+  footer .ajuste .socialmedia ico{
+    font-size: 0.6rem;
+  }
+
+  footer .ajuste .copyright{
+    font-size: 0.6rem;
+  }
+}
+
+/* --- Animación de hamburguesa a "X" --- */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}

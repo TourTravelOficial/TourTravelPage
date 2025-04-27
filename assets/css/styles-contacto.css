@@ -1,0 +1,88 @@
+/* ======================== Base ======================== */
+:root{
+    --color1: #17252A;
+    --coloralternativ1: #0F0F0F;
+    --color2: #2B7A78;
+    --color3: #3AAFA9;
+    --coloralternative3: #49D3CE;
+    --color4: #DEF2F1;
+    --color5: #FEFFFF;
+
+    --menu-titulos: 1.4rem;
+}
+/* ======================== Base ======================== */
+
+.contact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--color3);
+  }
+  
+  .contact-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .contact-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #555;
+  }
+  
+  .social-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .social-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    background-color: #00b894;
+    color: white;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: background 0.3s, transform 0.3s;
+  }
+  
+  .social-btn:hover {
+    background-color: #00997a;
+    transform: scale(1.05);
+  }
+  
+  .social-btn i {
+    font-size: 1.5rem;
+  }
+  
+  /* Personalización por red */
+  .facebook { background-color: #3b5998; }
+  .facebook:hover { background-color: #2d4373; }
+  
+  .instagram { background-color: #e4405f; }
+  .instagram:hover { background-color: #d12b48; }
+  
+  .whatsapp { background-color: #25d366; }
+  .whatsapp:hover { background-color: #1ebe5b; }
+
+  .tiktok {
+    background-color: #000000;
+  }
+  
+  .tiktok:hover {
+    background-color: #333333;
+  }
+  
+  
+  /* Responsivo */
+  @media (max-width: 600px) {
+    .social-links {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  

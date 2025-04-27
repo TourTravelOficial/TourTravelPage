@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', Verdana, sans-serif;
+}
+
+/* ======================== Base ======================== */
+:root{
+    --color1: #17252A;
+    --coloralternativ1: #0F0F0F;
+    --color2: #2B7A78;
+    --color3: #3AAFA9;
+    --coloralternative3: #49D3CE;
+    --color4: #DEF2F1;
+    --color5: #FEFFFF;
+
+    --menu-titulos: 1.4rem;
+}
+
+body{
+    background-color: var(--color1);
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: var(--coloralternative3);
+}
+/* ======================== Base ======================== */
+
+
+
+/* ======================== Head ======================== */
+.head{
+    width: 100vw;
+    height: 20vh;
+    max-width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    background-color: var(--color1);
+    color: var(--coloralternative3);
+}
+
+.head img{
+    width: 150px;
+    height: 120px;
+}
+
+.head .logo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.head nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70%;
+    text-align: center;
+    font-size: var(--menu-titulos);
+    font-weight: 480;
+}
+
+.head nav ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 10px 20px;
+    position: relative;
+    cursor: pointer;
+}
+  
+.head nav ul li::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--coloralternative3);
+    transition: width 0.3s;
+}
+  
+.head nav ul li:hover::after {
+    width: 60%;
+}
+
+
+  
+/* ======================== Head ======================== */
+
+
+
+/* ======================== Main ======================== */
+.about{
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--coloralternative3);
+    color: var(--color1);
+}
+
+.about .imagen{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
+
+.about .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about .texto{
+    width: 100%;
+    height: 30%;
+    font-size: 1.3rem;
+    font-weight: 560;
+    color: var(--color1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destinos{
+    width: 100vw;
+    height: 40vh;
+    background-color: var(--color1);
+    color: var(--coloralternative3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destinos .ajuste{
+    width: 70%;
+    height: 100%;
+}
+
+.destinos .texto{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: first baseline;
+    align-items: center;
+    padding-left: 15px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.destinos .tarjetas{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.destinos .tarjetas .tarjeta{
+    width: 25%;
+    height: 80%;
+}
+
+.destinos .tarjetas .tarjeta .imagen{
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.destinos .tarjetas .tarjeta .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.destinos .tarjetas .tarjeta .imagen img:hover{
+    transform: scale(1.05);
+}
+
+.destinos .tarjetas .tarjeta .texto{
+    width: 100%;
+    height: 20%;
+    font-size: 1.3rem;
+}
+
+
+.goal{
+    width: 100vw;
+    max-width: 100vw;
+    height: 35vh;
+    overflow: hidden;
+}
+
+.goal .bg{
+    background-image: url('../img/Fondo2.png');
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: overlay;
+    color: var(--color5);
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.goal .bg .ajuste{
+    width: 70%;
+    height: 100%;   
+}
+
+.goal .bg .eslogan{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eslogan h1{
+    font-family: "Libre Baskerville", Verdana, sans-serif;
+}
+
+.goal .bg .description{
+    width: 100%;
+    height: 40%;
+    text-align: center;
+    font-weight: 500;
+}
+
+
+.socialmedia{
+    width: 100vw;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color3);
+    color: var(--color1);
+}
+
+.socialmedia .ajuste{
+    width: 70%;
+    height: 100%;
+}
+
+.socialmedia .ajuste .title{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socialmedia .ajuste .images{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.socialmedia .ajuste .images .image{
+    width: 22%;
+    height: 65%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.socialmedia .ajuste .images .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.socialmedia .ajuste .images .image img:hover{
+    transform: scale(1.05);
+}
+
+/* ======================== Main ======================== */
+
+/* ======================== Footer ======================== */
+footer{
+    width: 100vw;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .box{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .box img{
+    width: 160px;
+    height: 120px;
+}
+
+footer .box .ajuste{
+    width: 100%;
+    height: 100%;
+}
+
+footer .box .ajuste div{
+    width: 100%;
+}
+
+footer .box .ajuste .ajustet, footer .box .ajuste .ajusteb{
+    height: 30%;
+}
+
+footer .Contact, footer .mail, footer .socialmediaf, footer .copyright{
+    height: 10%;
+    text-align: center;
+    color: var(--color5);
+    font-size: 1.1rem;
+}
+
+footer .socialmediaf a{
+    padding: 5px;
+}
+/* ======================== Footer ======================== */
+
+
+
+/* ==================================================== Destino ==================================================== */
+
+/* ======================== Main ======================== */
+.destino-cuerpo{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+}
+
+.destino-cuerpo .destino-ajuste{
+    width: 65%;
+}
+
+.destino-cuerpo .destino-ajuste .destino-top, .destino-cuerpo .destino-ajuste .destino-bot{
+    height: 7vh;
+    width: 100%;
+}
+
+.destino-tarjetas{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas del mismo ancho */
+    gap: 20px; /* Espacio entre los items */
+    padding: 20px;
+}
+
+.destino-tarjeta{
+    height: 49vh;
+    background-color: var(--color1);
+    border-top: 8px solid var(--color1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.destino-tarjeta .destino-tarjeta-img{
+    width: 100%;
+    height: 33%;
+    overflow: hidden;
+}
+
+.destino-tarjeta-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.destino-tarjeta .destino-ajuste-tarjeta{
+    width: 100%;
+    height: 67%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.destino-tarjeta-description{
+    width: 70%;
+    height: 80%;
+}
+
+.destino-tarjeta-description-1, .destino-tarjeta-description-2{
+    height: 40%;
+}
+
+.destino-tarjeta-description-3{
+    height: 20%;
+}
+
+.destino-tarjeta-description-3 a{
+    font-weight: 500;
+}
+
+.destino-tarjeta-description-3 a:hover{
+    color: var(--color4);
+}
+
+.destino-tarjeta-description div{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.destino-tarjeta-estado span{
+    padding: 6px;
+    background-color: var(--color2);
+    color: var(--color1);
+    font-weight: 580;
+}
+
+.destino-tarjeta-locacion, .destino-tarjeta-tipo, .destino-tarjeta-description-2{
+    color: var(--color5);
+}
+
+.destino-tarjeta-tipo, .destino-tarjeta-description-2, .destino-tarjeta-description-3{
+    font-size: 1.1rem;
+}
+/* ======================== Main ======================== */
+
+/* ==================================================== Destino ==================================================== */
+
+/* ==================================================== Experiencia ==================================================== */
+.experiencia-eslogan{
+    font-family: "Libre Baskerville", Verdana, sans-serif;
+}
+/* ==================================================== Experiencia ==================================================== */

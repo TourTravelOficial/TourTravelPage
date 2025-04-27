@@ -1,0 +1,15 @@
+/* Estilos para el contenedor principal */
+.main-container {
+  opacity: 0; /* Comienza invisible */
+  animation: fadeIn 1s ease-in forwards; /* Aplica la animación */
+}
+
+/* Definición de la animación */
+@keyframes fadeIn {
+  from {
+      opacity: 0; /* Transparente al principio */
+  }
+  to {
+      opacity: 1; /* Totalmente visible al final */
+  }
+}

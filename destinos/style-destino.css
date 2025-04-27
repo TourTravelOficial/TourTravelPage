@@ -1,0 +1,67 @@
+/* ======================== Base ======================== */
+:root{
+    --color1: #17252A;
+    --coloralternativ1: #0F0F0F;
+    --color2: #2B7A78;
+    --color3: #3AAFA9;
+    --coloralternative3: #49D3CE;
+    --color4: #DEF2F1;
+    --color5: #FEFFFF;
+
+    --menu-titulos: 1.4rem;
+}
+/* ======================== Base ======================== */
+
+/* Estilos para el contenedor principal */
+.blog-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Ocupa toda la pantalla */
+    padding: 10px;
+    background-color: var(--color3); /* Color de fondo suave */
+}
+
+/* Estilos para la imagen */
+.blog-image {
+    max-width: 100%; /* Se ajusta al tamaño del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 10px; /* Esquinas redondeadas */
+    margin-bottom: 10px; /* Espaciado inferior */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Estilos para el botón */
+.back-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: var(--color4); /* Texto blanco */
+    background-color: var(--color1); /* Azul atractivo */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto hover del botón */
+.back-button:hover {
+    background-color: var(--color2); /* Azul más oscuro */
+    transform: scale(1.1); /* Botón ligeramente más grande */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .blog-container {
+        padding: 10px;
+    }
+
+    .blog-image {
+        border-radius: 5px; /* Esquinas menos redondeadas en pantallas pequeñas */
+    }
+
+    .back-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}

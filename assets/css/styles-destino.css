@@ -1,0 +1,66 @@
+/* ======================== Base ======================== */
+:root{
+    --color1: #17252A;
+    --coloralternativ1: #0F0F0F;
+    --color2: #2B7A78;
+    --color3: #3AAFA9;
+    --coloralternative3: #49D3CE;
+    --color4: #DEF2F1;
+    --color5: #FEFFFF;
+
+    --menu-titulos: 1.4rem;
+}
+/* ======================== Base ======================== */
+
+/* Estilos iniciales de la tarjeta */
+.card {
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Suaviza los efectos */
+}
+
+/* Efecto hover */
+.card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+@media (max-width: 940px){
+    .destino-cuerpo .destino-ajuste{
+        width: 80%;
+    }
+}
+
+@media (max-width: 690px){
+    .destino-cuerpo .destino-ajuste{
+        font-size: 1rem;
+    }
+
+    .destino-tarjeta-tipo, .destino-tarjeta-description-2, .destino-tarjeta-description-3 {
+        font-size: 0.9rem;
+    }
+
+    .destino-tarjetas{
+        padding: 5px;
+    }
+}
+
+@media (max-width: 570px){
+    .destino-cuerpo .destino-ajuste{
+        font-size: 0.6rem;
+    }
+
+    .destino-tarjeta-tipo, .destino-tarjeta-description-2, .destino-tarjeta-description-3 {
+        font-size: 0.55rem;
+    }
+}
+
+@media (max-width: 390px){
+    .destino-cuerpo .destino-ajuste{
+        font-size: 0.54rem;
+    }
+
+    .destino-tarjeta-tipo, .destino-tarjeta-description-2, .destino-tarjeta-description-3 {
+        font-size: 0.48rem;
+    }
+}

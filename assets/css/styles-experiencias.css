@@ -1,0 +1,103 @@
+/* ======================== Base ======================== */
+:root{
+    --color1: #17252A;
+    --coloralternativ1: #0F0F0F;
+    --color2: #2B7A78;
+    --color3: #3AAFA9;
+    --coloralternative3: #49D3CE;
+    --color4: #DEF2F1;
+    --color5: #FEFFFF;
+
+    --menu-titulos: 1.4rem;
+}
+
+/* ======================== Base ======================== */
+
+.experience-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: var(--color3);
+    animation: fadeIn 1.5s ease forwards;
+  }
+  
+  .experience-title {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .experience-subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    color: #666;
+  }
+  
+  .experience-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 30px;
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  .photo-sample {
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.4s ease;
+  }
+  
+  .photo-sample img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  
+  .photo-sample:hover img {
+    transform: scale(1.05);
+  }
+  
+  .download-link {
+    margin-top: 20px;
+  }
+  
+  .animated-button {
+    background-color: var(--color1);
+    padding: 12px 30px;
+    color: var(--color5);
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background 0.3s, transform 0.3s;
+    display: inline-block;
+  }
+  
+  .animated-button:hover {
+    background-color: #00997a;
+    transform: scale(1.05);
+  }
+  
+  .fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+  }
+  
+  .fade-in-section.visible {
+    opacity: 1;
+    transform: none;
+  }
+  
+
+  /* Animaciones */
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
