@@ -4,6 +4,19 @@
   animation: fadeIn 1s ease-in forwards; /* Aplica la animación */
 }
 
+.fade-up {
+  opacity: 0;
+  transform: translateY(-30px); /* Mover 30px hacia arriba */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Cuando ya se ve */
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 /* Definición de la animación */
 @keyframes fadeIn {
   from {
