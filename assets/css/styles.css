@@ -415,10 +415,18 @@ footer .socialmediaf a{
 
 .destino-tarjeta-description-1, .destino-tarjeta-description-2{
     height: 40%;
+    font-size: clamp(0.6rem, 1vw, 1.1rem);
 }
 
 .destino-tarjeta-description-3{
     height: 20%;
+}
+
+.destino-tarjeta-description-1 .destino-tarjeta-tipo,
+.destino-tarjeta-description-2 p,
+.destino-tarjeta-description-3 a{
+    font-size: clamp(0.6rem, 1vw, 1.1rem);
+
 }
 
 .destino-tarjeta-description-3 a{
